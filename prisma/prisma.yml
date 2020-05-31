@@ -1,0 +1,16 @@
+endpoint: http://localhost:4466
+# endpoint: ${env:PRISMA_END_POINT}
+datamodel:
+  - entities/user.prisma
+  - entities/post.prisma
+databaseType: document
+
+# Specifies the language and directory for the generated Prisma client.
+generate:
+  - generator: typescript-client
+    output: ../src/generated/prisma-client
+# Ensures Prisma client is re-generated after a datamodel change.
+# hooks:
+#   post-deploy:
+#     - prisma generate
+

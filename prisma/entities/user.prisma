@@ -1,0 +1,11 @@
+type User {
+  id: ID! @id
+  username: String! @unique
+  email: String! @unique
+  password: String! @unique
+  posts: [Post!]!
+  comments: [Comment!]!
+  likes: [Like!]!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
